@@ -3,17 +3,31 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
-    "express": "^4.21.2"
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9"
   },
   "devDependencies": {
     "jest": "^29.7.0",
     "supertest": "^7.1.0"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JeissonPaspur/pico-placa-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JeissonPaspur/pico-placa-api/issues"
+  },
+  "homepage": "https://github.com/JeissonPaspur/pico-placa-api#readme",
+  "description": ""
 }
