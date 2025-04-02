@@ -18,9 +18,10 @@ app.get('/pico', (req,res)=>{
     const fecha = new Date(2025, 0, 2);    //toLocaleString('es-CO',{ timeZone: 'America/Bogota'});
     const fechaInicial = new Date(2024, 11, 29);    //toLocaleString('es-CO',{ timeZone: 'America/Bogota'});
     const dias = Math.floor ((fecha - fechaInicial) / (1000 * 60 * 60 * 24));
-    const semanas = Math.floor (dias / 7 + 1);
-    const indice = semanas %5; // semanas % rotacion.le
-    res.json({fecha, fechaInicial, dias, semanas, indice});
+    const semanas = Math.floor (dias / 7) + 1;
+    const indice = semanas % 5 + 1; // semanas % rotacion.le
+    const dia = fecha.getDay();
+    res.json({fecha, fechaInicial, dias, semanas, indice, dia});
 });
 
 //INICIAMOS EL SERVIDOR 
